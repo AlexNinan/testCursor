@@ -105,3 +105,20 @@ If you like our work, please consider supporting us on Patreon, BuyMeACoffee, or
 ## Assets Used
 
 - [Connection Serif Font (SIL Open Font)](https://fonts2u.com/connection-serif.font)
+
+## Java Test Framework Demo
+
+This repository now contains a minimal Java-based test framework that demonstrates how to assert that `1 + 1 = 2`. The code lives under `src/main/java/com/example/microtest`.
+
+### Running the demo without Maven
+
+```bash
+javac -d target/classes src/main/java/com/example/microtest/*.java
+java -cp target/classes com.example.microtest.Main
+```
+
+### Running with Maven (if installed)
+
+```bash
+mvn -f pom.xml exec:java
+```
