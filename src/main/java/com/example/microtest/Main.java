@@ -5,9 +5,8 @@ package com.example.microtest;
  */
 public final class Main {
     public static void main(String[] args) {
-        new TestRunner()
-                .register(new AdditionTest())
-                .register(new AddOneAndTwoTest())
-                .runAll();
+        TestRunner runner = new TestRunner();
+        AdditionTests.all().forEach(runner::register);
+        runner.runAll();
     }
 }
